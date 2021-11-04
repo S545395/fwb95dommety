@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(class="container-fluid")
+    h1= title
+  - let results=[{name:"Diesel",type:"denim",cost:45.26},{name:"Wrangler",type:"torn jeans",cost:57.39},{name:"Celvin Klien",type:"shaded jeans",cost:89.85}] 
+    div(class="row")
+      each form,index in results
+        div(class = "col-sm-2 bg-secondary" onclick=`buy(${index})`) #{form.name}
+        br
+        br
+        br
+        div(class = "col-sm-2 bg-secondary" onclick=`buy(${index})`) #{form.type}
+        br
+        br
+        br
+        div(class = "col-sm-2 bg-secondary" onclick=`buy(${index})`) #{form.cost}
+    script.
+ 
+
+
+  
